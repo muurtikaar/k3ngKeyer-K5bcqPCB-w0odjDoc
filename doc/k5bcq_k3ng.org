@@ -131,6 +131,7 @@ The wrong pinout will /still/ work, /technically/ - but would require manually r
 
    To enable the use of the keypad, you *MUST* enable the appropriate module /"#define FEATURE_4x4KEYPAD"/ or /"#define FEATURE_3x4_KEYPAD"/ in /"keyer_features_and_options_k5bcq.h"./  The pinouts should be correct (matching the PCB markings), but no confirmation has been made at this time.  The pins are set under /"FEATURE_4x4_KEYPAD"/ and /"FEATURE_3x4_KEYPAD"/ in /"keyer_pin_settings_k5bcq.h"./
 [[file:../png/3.2/pcb-top-3x4-keypad.png]]
+[[file:../png/3.2/keypad_layout.png]]
    
 #+LaTeX: \newpage
  * [ ] Goertzel Audio Decoder
@@ -248,7 +249,7 @@ The wrong pinout will /still/ work, /technically/ - but would require manually r
      
      /Builders note:  Left to right, the i2c pins are:  +5volts, SDA, SCL, Ground.  You may also need to adjust the i2c device address in the main keyer file (k3ng_keyer.ino), if you are having difficulty connecting using some of the i2c hardware.  This is rare, but possible - particularly when using inexpensive Chinese clones./
 [[file:../png/3.4/pcb-top-i2c-display.png]]
-     
+[[file:../png/3.4/i2c_1602LCD.png]]
 #+LaTeX: \newpage
  * [ ] LED Indicators
    - [ ] R13, 19, 20, 26 - 220\Omega - (Red-Red-Brown)

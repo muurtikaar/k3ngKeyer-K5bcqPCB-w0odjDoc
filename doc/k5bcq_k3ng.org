@@ -1,6 +1,6 @@
 #+OPTIONS: ^:nil
 #+LaTeX_HEADER: \usepackage{pdfpages}
-#+TITLE: K5BCQ K3NG Keyer v0.5
+#+TITLE: K5BCQ K3NG Keyer v0.6
 #+AUTHOR:  Josh (W0ODJ), Ken (KM4NFQ)
 
 * Introduction
@@ -75,8 +75,8 @@ The wrong pinout will /still/ work, /technically/ - but would require manually r
 ** Arduino
  * [ ] Arduino
    - [ ] Arduino Mega 2560 Pro Mini
-   - [ ] 2.54mm Male Headers (1 - 2x20, 1 - 2x16, 1 - 2x3)
-   - [ ] 2.54mm Female Headers (1 - 2x20, 1 - 2x16, 1 - 2x3)
+   - [ ] 2.54mm Male Headers (1 - 2x21, 1 - 2x16, 1 - 2x3)
+   - [ ] 2.54mm Female Headers (1 - 2x21, 1 - 2x16, 1 - 2x3)
    
    The Arduino is installed on the underside of the board.  If you wish, you could directly solder the board to the main PCB using just the male headers - most people prefer the ability to remove the Arduino, however.  It may be easier to install the Arduino and headers AFTER all of the other parts have been installed.  Builder's discretion.
 

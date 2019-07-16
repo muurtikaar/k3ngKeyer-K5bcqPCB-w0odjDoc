@@ -1,4 +1,4 @@
-% Created 2019-06-22 Sat 19:41
+% Created 2019-07-15 Mon 21:59
 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
@@ -18,10 +18,10 @@
 \usepackage{pdfpages}
 \author{Josh (W0ODJ), Ken (KM4NFQ)}
 \date{\today}
-\title{K5BCQ K3NG Keyer v0.5}
+\title{K5BCQ K3NG Keyer v0.6}
 \hypersetup{
  pdfauthor={Josh (W0ODJ), Ken (KM4NFQ)},
- pdftitle={K5BCQ K3NG Keyer v0.5},
+ pdftitle={K5BCQ K3NG Keyer v0.6},
  pdfkeywords={},
  pdfsubject={},
  pdfcreator={Emacs 26.1 (Org mode 9.2.3)}, 
@@ -33,7 +33,7 @@
 
 
 \section{Introduction}
-\label{sec:orgcad35dc}
+\label{sec:org8efcbbc}
 This keyer is a design of the proposed schematic provided by Anthony Good (K3NG) on his website, \href{https://blog.radioartisan.com/arduino-cw-keyer}{Radioartisan}.  As taken from his website:
 \begin{quote}
 "This is an open source Arduino based CW (Morse Code) keyer with a lot of features and flexibility, rivaling commercial keyers which often cost significantly more.  The code can be used with a full blown Arduino board or an AVR microcontroller chip can be programmed and used directly in a circuit.  This keyer is suitable as a standalone keyer or for use permanently installed inside a rig, especially homebrew QRP rigs.  It’s open source code so you can fully customize it to fit your needs and also perhaps learn from it or find coding ideas for other projects."
@@ -47,7 +47,7 @@ This documentation is specific for the K5BCQ board of the K3NG keyer.  However, 
 The PCB images of part locations have been painstakingly created by Ken, KM4NFQ.  He has graciously allowed them to be included in this documentation.
 
 \section{Bill of Materials}
-\label{sec:orgf12d741}
+\label{sec:orgd9a9a71}
 \begin{center}
 \begin{tabular}{llrll}
 \textbf{Reference} & \textbf{Value} & \textbf{Quantity} & \textbf{Digikey \#} & \textbf{Notes}\\
@@ -90,18 +90,18 @@ P1, 2, 4A, 4P, ASR-JP &  &  &  & 2.54mm Male headers\\
 
 
 \subsection{Which Arduino?}
-\label{sec:org1529306}
+\label{sec:org5246890}
 
 Of significant importance in the fact that while Arduino(s) is/are "standard," there is great leeway and interpretation in the particular details regarding "standard."  When building the K5BCQ PCB of the K3NG keyer, you must make sure you are purchasing one of the boards with the correct footprint for the PCB.  While many producer's versions (may) work, there is no guarantee.  Just be sure to obtain one with the correct voltage (5v), USB (if desired), and footprint.  Linked above is a known good brand (RobotDyn) for the designed PCB.
 
 \subsubsection{The \textbf{correct} footprint looks like:}
-\label{sec:org980ffcc}
+\label{sec:orge5aad90}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../png/2.1/Correct2560.png}
 \end{center}
 
 \subsubsection{The \textbf{incorrect} footprint looks like:}
-\label{sec:org255cc41}
+\label{sec:org0f14868}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../png/2.1/Wrong2560.png}
 \end{center}
@@ -110,19 +110,19 @@ The wrong pinout will \emph{still} work, \emph{technically} - but would require 
 
 \newpage
 \section{Build Instructions}
-\label{sec:orgcd3bf7e}
+\label{sec:org37f6a82}
 Building is relatively straightforward.  Instructions to build all available options is included in the documentation.  If there is a module you do not wish to include, just skip that step.  If there is an issue skipping the step, it will be noted in the documentation for that step.
 
 If you are going to build all of the modules - ignore the following steps.  Just build it normally - lowest parts first.  My preferred order is resistors, capacitors, transistors, headers, buttons and other hardware.
 
 \subsection{Arduino}
-\label{sec:org3b5a520}
+\label{sec:org8543ede}
 \begin{itemize}
 \item[{$\square$}] Arduino
 \begin{itemize}
 \item[{$\square$}] Arduino Mega 2560 Pro Mini
-\item[{$\square$}] 2.54mm Male Headers (1 - 2x20, 1 - 2x16, 1 - 2x3)
-\item[{$\square$}] 2.54mm Female Headers (1 - 2x20, 1 - 2x16, 1 - 2x3)
+\item[{$\square$}] 2.54mm Male Headers (1 - 2x21, 1 - 2x16, 1 - 2x3)
+\item[{$\square$}] 2.54mm Female Headers (1 - 2x21, 1 - 2x16, 1 - 2x3)
 \end{itemize}
 
 The Arduino is installed on the underside of the board.  If you wish, you could directly solder the board to the main PCB using just the male headers - most people prefer the ability to remove the Arduino, however.  It may be easier to install the Arduino and headers AFTER all of the other parts have been installed.  Builder's discretion.
@@ -141,7 +141,7 @@ Once all of the pins are soldered, remove the Arduino and set aside.  You don't 
 \end{center}
 \newpage
 \subsection{Inputs}
-\label{sec:orgd00c9b2}
+\label{sec:orgb482c53}
 \begin{itemize}
 \item[{$\square$}] Paddle Input
 \begin{itemize}
@@ -214,6 +214,9 @@ To enable the use of the keypad, you \textbf{MUST} enable the appropriate module
 \begin{center}
 \includegraphics[width=.9\linewidth]{../png/3.2/pcb-top-3x4-keypad.png}
 \end{center}
+\begin{center}
+\includegraphics[width=.9\linewidth]{../png/3.2/keypad_layout.png}
+\end{center}
 
 \newpage
 \begin{itemize}
@@ -236,7 +239,7 @@ Information regarding the Goertzel circuit and code used in the K3NG keyer can b
 
 \newpage
 \subsection{Outputs}
-\label{sec:org428e19f}
+\label{sec:orgc9d7519}
 \begin{itemize}
 \item[{$\square$}] Keyer Output 1
 \begin{itemize}
@@ -346,7 +349,7 @@ SP1 is hookups for an optional, off-board speaker.  Audio output is taken from b
 
 \newpage
 \subsection{Displays / Indicators}
-\label{sec:org59b1980}
+\label{sec:org5d5f8b0}
 There are number of inexpensive LCD displays that are available from a number of sources.  There are too many to list individually, but suffice it to say, if it uses serial or i2c, you can hook it up.
 
 There are multiple settings for displays.  The assigned pins are set by \emph{"defined(FEATURE\_LCD\_4BIT)"} in \emph{"keyer\_pin\_settings\_k5bcq.h"} for serial displays.  i2c is configured by enabling the appropriate i2c option in \emph{"keyer\_features\_and\_options.h",} based on the hardware you are using.  The k5bcq configuration comes defaulted to a serial, 1602 display.  To adjust the LCD display size (serial or i2c - 1604, 2004, etc), change \emph{"define LCD\_COLUMNS"} and \emph{"define LCD\_ROWS"} to their appropriate values in \emph{"keyer\_settings\_k5bcq.h".} 
@@ -389,7 +392,9 @@ The installation of an i2c display is similar to that of a standard serial displ
 \begin{center}
 \includegraphics[width=.9\linewidth]{../png/3.4/pcb-top-i2c-display.png}
 \end{center}
-
+\begin{center}
+\includegraphics[width=.9\linewidth]{../png/3.4/i2c_1602LCD.png}
+\end{center}
 \newpage
 \begin{itemize}
 \item[{$\square$}] LED Indicators
@@ -417,7 +422,7 @@ LED 4 & 29 & Command Mode Indicator\\
 
 \newpage
 \subsection{Miscellaneous}
-\label{sec:org16cabf3}
+\label{sec:orgd6581ad}
 \begin{itemize}
 \item[{$\square$}] DC Power Jack
 \begin{itemize}
@@ -457,7 +462,7 @@ You can adjust these features by jumpering these connections with bus wire or sc
 
 \newpage
 \section{Flashing Instructions}
-\label{sec:org0f642e6}
+\label{sec:orgd927fdd}
 The code for the K3NG keyer, in any of its designs (homebrew or otherwise!) resides on the \href{https://github.com/k3ng/k3ng\_cw\_keyer}{K3NG Github}.  Goody has kindly including pull requests to enable hardware for this build into the K3NG main code, resulting in a very easy method for flashing the most recent code and features!
 
 \begin{enumerate}
@@ -505,6 +510,6 @@ The code for the K3NG keyer, in any of its designs (homebrew or otherwise!) resi
 
 \newpage
 \section{Schematic}
-\label{sec:org437c00f}
+\label{sec:org4a9493b}
 \includepdf[angle=90]{../Schematic_BIG-Keyer_Sheet-1_20190329121109.pdf}
 \end{document}

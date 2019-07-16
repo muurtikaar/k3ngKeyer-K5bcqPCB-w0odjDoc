@@ -32,18 +32,18 @@
     "geometry"
     "pdfpages")
    (LaTeX-add-labels
-    "sec:orgcad35dc"
-    "sec:orgf12d741"
-    "sec:org1529306"
-    "sec:org980ffcc"
-    "sec:org255cc41"
-    "sec:orgcd3bf7e"
-    "sec:org3b5a520"
-    "sec:orgd00c9b2"
-    "sec:org428e19f"
-    "sec:org59b1980"
-    "sec:org16cabf3"
-    "sec:org0f642e6"
-    "sec:org437c00f"))
+    "sec:org8efcbbc"
+    "sec:orgd9a9a71"
+    "sec:org5246890"
+    "sec:orge5aad90"
+    "sec:org0f14868"
+    "sec:org37f6a82"
+    "sec:org8543ede"
+    "sec:orgb482c53"
+    "sec:orgc9d7519"
+    "sec:org5d5f8b0"
+    "sec:orgd6581ad"
+    "sec:orgd927fdd"
+    "sec:org4a9493b"))
  :latex)
 

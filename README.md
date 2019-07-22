@@ -12,3 +12,5 @@
 ## The W0ODJ documentation for the K5BCQ PCB is currently in development.
 The PNG graphic images in this repository are meant to be included in the documentation.
 
+## Build pix
+Snapshots of a work-in-progress build of the K5BCQ PCB are in the pix/ directory.

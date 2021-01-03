@@ -1,6 +1,6 @@
 #+OPTIONS: ^:nil
 #+LaTeX_HEADER: \usepackage{pdfpages}
-#+TITLE: K5BCQ K3NG Keyer v0.6
+#+TITLE: K5BCQ K3NG Keyer v0.7
 #+AUTHOR:  Josh (W0ODJ), Ken (KM4NFQ)
 
 * Introduction
@@ -17,40 +17,42 @@
   The PCB images of part locations have been painstakingly created by Ken, KM4NFQ.  He has graciously allowed them to be included in this documentation.
 
 * Bill of Materials
-  | *Reference*                 | *Value*  | *Quantity* | *Digikey #*     | *Notes*                      |
-  |-----------------------------+----------+------------+-----------------+------------------------------|
-  | R1, 2, 3, 4, 5, 6, 7        | 1k       |          7 | CF18JT1K00CT-ND | 1/8w                         |
-  | R12, 18, 27, 28             | 1k       |          4 | CF14JT1K00CT-ND | 1/4w                         |
-  | R16, 17, 21, 22             | 10k      |          5 | CF14JT10K0CT-ND | 1/4w                         |
-  | R9                          | 10k      |          1 | CF18JT10K0CT-ND | 1/8w                         |
-  | R15                         | 220      |          1 | CF18JT220RCT-ND | 1/8w                         |
-  | R13, 19, 20, 26             | 220      |          4 | CF14JT220RCT-ND | 1/4w                         |
-  | R14, 23, 36                 | 100      |          3 | CF14JT100RCT-ND | 1/4w                         |
-  | R24, 25                     | 4.7k     |          2 | CF14JT4K70CT-ND | 1/4w                         |
-  | R30, 31, 33                 | 3.3k     |          3 | CF18JT3K30CT-ND | 1/8w                         |
-  | R32                         | 560      |          1 | CF18JT560RCT-ND | 1/8w                         |
-  | R34                         | 10       |          1 | CF18JT10R0CT-ND | 1/8w                         |
-  | R35                         | 150k     |          1 | CF18JT150KCT-ND | 1/8w                         |
-  | R37                         | 100k     |          1 | CF18JT100KCT-ND | 1/8w                         |
-  | R8, 11, 29                  | 20k      |          3 | 3306F-203-ND    | 6mm top-adjust trimpot       |
-  | R10                         | 500      |          1 | 3306F-501-ND    | 6mm top-adjust trimpot       |
-  | C1, 2, 3, 5, 7, 8           | 10nF     |          6 | 490-8634-ND     |                              |
-  | C6, 9, 10, 11a, 11b, 12, 13 | 100nF    |          7 | 445-173396-1-ND |                              |
-  | C4                          | 100uF    |          1 | 493-6095-1-ND   | Electrolytic                 |
-  | C14, 15, 16, 17             | 10uF     |          4 | P19580CT-ND     | Electrolytic                 |
-  | Q1, 3, 4, 6, 8              | 2N7000   |          5 | 2N7000FS-ND     | TO-92                        |
-  | Q2, 5, 7                    | 2N3904   |          3 | 2N3904FS-ND     | TO-92                        |
-  | LED1, 2, 3, 4               |          |          4 |                 | LED of your choice of colors |
-  | SW1                         |          |          1 | 987-1398-ND     | Rotary encoder with switch   |
-  | SW2, 3, 4, 5, 6, 7, 8       |          |          7 | 450-1642-ND     | 6mm x 6mm NO tactile switch  |
-  | J1, 2, 3, 4, 5              |          |          5 | SC1461-ND       | PJ-325M, [[https://www.digikey.com/product-detail/en/switchcraft-inc/35RAPC4BV4/SC1461-ND/528670][These]] should work   |
-  | J6                          |          |          1 | CP-002A-ND      | DC plug                      |
-  | X1                          |          |          1 | CP-2260-ND      | MiniDin 6 - [[https://www.digikey.com/product-detail/en/cui-inc/MD-60SM/CP-2260-ND/96940][MD-60SM]]          |
-  | SP1                         |          |          1 |                 | Off-board speaker            |
-  | U1                          | Display  |          1 |                 | 1602, 1604, 2004 Serial LCD  |
-  | U2                          | Mega2560 |          1 |                 | Mini variant, [[https://robotdyn.com/mega-2560-pro-mini-atmega2560-16au.html][here]]           |
-  | U3                          | Keypad   |          1 |                 | 3x3 or 3x4 keypad            |
-  | P1, 2, 4A, 4P, ASR-JP       |          |            |                 | 2.54mm Male headers          |
+  | *Reference*              | *Value*  | *Quantity* | *Digikey #*     | *Notes*                      |
+  |--------------------------+----------+------------+-----------------+------------------------------|
+  | R1, 2, 3, 4, 5, 6, 7     | 1k       |          7 | CF18JT1K00CT-ND | 1/8w                         |
+  | R12, 18, 27, 28          | 1k       |          4 | CF14JT1K00CT-ND | 1/4w                         |
+  | R16, 17, 21, 22          | 10k      |          5 | CF14JT10K0CT-ND | 1/4w                         |
+  | R9                       | 10k      |          1 | CF18JT10K0CT-ND | 1/8w                         |
+  | R15                      | 220      |          1 | CF18JT220RCT-ND | 1/8w                         |
+  | R13, 19, 20, 26          | 220      |          4 | CF14JT220RCT-ND | 1/4w                         |
+  | R14                      | 100      |          1 | CF14JT100RCT-ND | 1/4w                         |
+  | R24, 25                  | 4.7k     |          2 | CF14JT4K70CT-ND | 1/4w                         |
+  | R30, 31, 33              | 3.3k     |          3 | CF18JT3K30CT-ND | 1/8w                         |
+  | R32                      | 560      |          1 | CF18JT560RCT-ND | 1/8w                         |
+  | R34                      | 10       |          1 | CF18JT10R0CT-ND | 1/8w                         |
+  | R35                      | 150k     |          1 | CF18JT150KCT-ND | 1/8w                         |
+  | R36                      | 100      |          1 | CF18JT100RCT-ND | 1/8w                         |
+  | R37                      | 100k     |          1 | CF18JT100KCT-ND | 1/8w                         |
+  | R8, 11, 29               | 20k      |          3 | 3306F-203-ND    | 6mm top-adjust trimpot       |
+  | R10                      | 500      |          1 | 3306F-501-ND    | 6mm top-adjust trimpot       |
+  | C1, 2, 3, 5, 7, 8        | 10nF     |          6 | 490-8634-ND     |                              |
+  | C6                       | 220pF    |          1 | 445-180595-1-ND | 1uF possibly better          |
+  | C9, 10, 11a, 11b, 12, 13 | 100nF    |          6 | 445-173396-1-ND |                              |
+  | C4                       | 100uF    |          1 | P19578CT-ND     | Electrolytic                 |
+  | C14, 15, 16, 17          | 10uF     |          4 | P19580CT-ND     | Electrolytic                 |
+  | Q1, 3, 4, 6, 8           | 2N7000   |          5 | 2N7000FS-ND     | TO-92                        |
+  | Q2, 5, 7                 | 2N3904   |          3 | 2N3904FS-ND     | TO-92                        |
+  | LED1, 2, 3, 4            |          |          4 |                 | LED of your choice of colors |
+  | SW1                      |          |          1 | 987-1398-ND     | Rotary encoder with switch   |
+  | SW2, 3, 4, 5, 6, 7, 8    |          |          7 | 450-1642-ND     | 6mm x 6mm NO tactile switch  |
+  | J1, 2, 3, 4, 5           |          |          5 | SC1461-ND       | PJ-325M, [[https://www.digikey.com/product-detail/en/switchcraft-inc/35RAPC4BV4/SC1461-ND/528670][These]] should work   |
+  | J6                       |          |          1 | CP-002A-ND      | DC plug                      |
+  | X1                       |          |          1 | CP-2260-ND      | MiniDin 6 - [[https://www.digikey.com/product-detail/en/cui-inc/MD-60SM/CP-2260-ND/96940][MD-60SM]]          |
+  | SP1                      |          |          1 |                 | Off-board speaker            |
+  | U1                       | Display  |          1 |                 | 1602, 1604, 2004 Serial LCD  |
+  | U2                       | Mega2560 |          1 |                 | Mini variant, [[https://robotdyn.com/mega-2560-pro-mini-atmega2560-16au.html][here]]           |
+  | U3                       | Keypad   |          1 |                 | 3x3 or 3x4 keypad            |
+  | P1, 2, 4A, 4P, ASR-JP    |          |            |                 | 2.54mm Male headers          |
   *** Part footprints should be correct - BUT I HAVE NOT CONFIRMED!!! Particularly capacitors lead spacing!***
 
   
@@ -286,6 +288,12 @@ The wrong pinout will /still/ work, /technically/ - but would require manually r
    * This set of pads allows you to either power the peripherals using the 5 volt output of the arduino, or input 5v from an external source to power them.  If you plan to use it independent of a computer, you likely will just permanently jumper this.
 [[file:../png/3.5/pcb-top-power-jumper.png]]
      
+#+LaTeX: \newpage
+ * [ ] Wiring Correction
+
+   * There is a possibility of a ground becoming isolated on the v2.1 board, as identified by OK1RR.  A jumper is recommended between the ground of R15 (right side), and R31 (bottom).  A photo is worth 1000 words, and thanks to OK1RR for the following image:
+file:../png/3.5/wiring_correction.jpg
+
 #+LaTeX: \newpage
 * Flashing Instructions
   The code for the K3NG keyer, in any of its designs (homebrew or otherwise!) resides on the [[https://github.com/k3ng/k3ng_cw_keyer][K3NG Github]].  Goody has kindly including pull requests to enable hardware for this build into the K3NG main code, resulting in a very easy method for flashing the most recent code and features!
